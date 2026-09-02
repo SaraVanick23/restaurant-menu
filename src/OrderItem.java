@@ -1,11 +1,9 @@
+public class OrderItem {
 
-public class CustomerOrder {
     private MenuItem item;
     private int quantity;
 
-
-
-    public CustomerOrder(MenuItem item, int quantity){
+    public OrderItem(MenuItem item, int quantity) {
         this.item = item;
         this.quantity = quantity;
     }
@@ -14,11 +12,15 @@ public class CustomerOrder {
         return item;
     }
 
-    public int getQuantity(){
+    public int getQuantity() {
         return quantity;
     }
 
-    public double getTotalPrice(){
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public double getTotalPrice() {
         return item.getPrice() * quantity;
     }
 }
